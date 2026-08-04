@@ -1,14 +1,11 @@
 class Solution {
     public boolean validDigit(int n, int x) {
-        String strx=String.valueOf(x);
         String strn=String.valueOf(n);
-        String[] str=strn.split("");
-        if(str[0].equals(strx))
+        char digit=(char)(x+'0');
+
+        if(strn.charAt(0)==digit)
             return false;
-        for(int i=1;i<str.length;i++){
-            if(str[i].equals(strx))
-                return true;
-        }
-        return false;
+
+        return strn.indexOf(digit,1)!=-1;
     }
 }
