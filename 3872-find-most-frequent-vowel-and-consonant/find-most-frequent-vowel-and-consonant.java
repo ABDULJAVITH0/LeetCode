@@ -1,8 +1,7 @@
 class Solution {
     public int maxFreqSum(String s) {
     HashMap<Character,Integer> map=new HashMap<>();
-    for(int i=0;i<s.length();i++){
-        char ch=s.charAt(i);
+    for(char ch:s.toCharArray()){
         map.put(ch,map.getOrDefault(ch,0)+1);
     }
     int vow=0,cons=0;
