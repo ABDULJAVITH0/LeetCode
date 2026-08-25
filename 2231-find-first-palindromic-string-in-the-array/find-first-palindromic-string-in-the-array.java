@@ -2,8 +2,8 @@ class Solution {
     public String firstPalindrome(String[] words) {
         String result="";
         for(String s:words){
-            String str=new StringBuilder(s).reverse().toString();
-            if(s.equals(str)){
+            StringBuilder str=new StringBuilder(s).reverse();
+            if(s.equals(str.toString())){
                 return s;
             }
         }
