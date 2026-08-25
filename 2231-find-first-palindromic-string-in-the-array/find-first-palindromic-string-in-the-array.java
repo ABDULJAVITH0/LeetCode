@@ -4,10 +4,9 @@ class Solution {
         for(String s:words){
             String str=new StringBuilder(s).reverse().toString();
             if(s.equals(str)){
-                result=s;
-                break;
+                return s;
             }
         }
-        return result;
+        return "";
     }
 }
