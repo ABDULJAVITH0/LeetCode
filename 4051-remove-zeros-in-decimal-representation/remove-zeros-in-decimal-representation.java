@@ -1,8 +1,15 @@
 class Solution {
     public long removeZeros(long n) {
-        String s=String.valueOf(n);
-        s=s.replace("0","");
-        long result=Long.valueOf(s);
+        long result=0;
+        long multiple=1;
+        while(n>0){
+            long digit=n%10;
+            if(digit!=0){
+                result+=digit*multiple;
+                multiple*=10;
+            }
+            n/=10;
+        }
         return result;
     }
 }
